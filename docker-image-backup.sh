@@ -12,6 +12,8 @@ tag=$3
 namespace='surenpi'
 echo $namespace
 
+docker login registry.cn-hangzhou.aliyuncs.com
+
 cmd="docker tag $srcNamespace/$imageId:$tag registry.cn-hangzhou.aliyuncs.com/$namespace/$imageId:$tag"
 echo "prepare to execute: $cmd"
 $cmd
