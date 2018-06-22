@@ -21,8 +21,8 @@ var installCmd = &cobra.Command{
 	},
 }
 
-func cmd(cmd string) {
-	cmd := exec.Command(cmd)
+func cmdExec(cmdStr string) {
+	cmd := exec.Command(cmdStr)
 	stdout, err := cmd.StdoutPipe()
 	if err != nil {
 		log.Fatal(err)
@@ -42,6 +42,6 @@ func cmd(cmd string) {
 }
 
 func install() {
-	cmd("apt-get update")
-	cmd("apt-get install python -y")
+	cmdExec("apt-get update")
+	cmdExec("apt-get install python -y")
 }
