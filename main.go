@@ -1,7 +1,7 @@
 package main
 
 import (
-	"cmd"
+	"github.com/linuxsuren/getGo/pkg/cmd"
 )
 
 func main() {
