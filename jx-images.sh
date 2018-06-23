@@ -29,3 +29,6 @@ docker tag registry.cn-beijing.aliyuncs.com/surenpi/jnlp-slave:3.14-1 jenkinsci/
 
 docker pull registry.cn-beijing.aliyuncs.com/surenpi/defaultbackend:1.3
 docker tag registry.cn-beijing.aliyuncs.com/surenpi/defaultbackend:1.3 k8s.gcr.io/defaultbackend:1.3
+
+docker pull registry.cn-beijing.aliyuncs.com/surenpi/nginx-ingress-controller:0.13.0
+docker registry.cn-beijing.aliyuncs.com/surenpi/nginx-ingress-controller:0.13.0 quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.13.0
