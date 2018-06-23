@@ -20,3 +20,5 @@ chmod u+x install.sh
 
 tar czvf ${NAME}.tar.gz ${NAME}* install.sh
 rm -rfv ${NAME}.key ${NAME}.csr ${NAME}.crt install.sh
+
+chown $USER:$USER
