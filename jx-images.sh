@@ -19,7 +19,7 @@ docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1
 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/mongodb:3.4.9-r1 docker.io/bitnami/mongodb:3.4.9-r1
 
 docker pull registry.cn-beijing.aliyuncs.com/surenpi/nexus:0.0.14
-docker tag registry.cn-beijing.aliyuncs.com/surenpi/nexus:0.0.14 docker.io/jenkinsxio/nexus
+docker tag registry.cn-beijing.aliyuncs.com/surenpi/nexus:0.0.14 docker.io/jenkinsxio/nexus:0.0.14
 
 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/builder-maven:0.0.307
 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/builder-maven:0.0.307 docker.io/jenkinsxio/builder-maven:0.0.307
@@ -30,5 +30,14 @@ docker tag registry.cn-beijing.aliyuncs.com/surenpi/jnlp-slave:3.14-1 jenkinsci/
 docker pull registry.cn-beijing.aliyuncs.com/surenpi/defaultbackend:1.3
 docker tag registry.cn-beijing.aliyuncs.com/surenpi/defaultbackend:1.3 k8s.gcr.io/defaultbackend:1.3
 
-docker pull registry.cn-beijing.aliyuncs.com/surenpi/nginx-ingress-controller:0.13.0
-docker registry.cn-beijing.aliyuncs.com/surenpi/nginx-ingress-controller:0.13.0 quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.13.0
+docker pull registry.cn-beijing.aliyuncs.com/surenpi/nginx-ingress-controller:0.14.0
+docker tag registry.cn-beijing.aliyuncs.com/surenpi/nginx-ingress-controller:0.14.0 quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.14.0
+
+docker pull registry.cn-beijing.aliyuncs.com/surenpi/chartmuseum:v0.2.8
+docker tag registry.cn-beijing.aliyuncs.com/surenpi/chartmuseum:v0.2.8 chartmuseum/chartmuseum:v0.2.8
+
+docker pull registry.cn-beijing.aliyuncs.com/surenpi/registry:2.6.2
+docker tag registry.cn-beijing.aliyuncs.com/surenpi/registry:2.6.2 registry:2.6.2
+
+docker pull registry.cn-beijing.aliyuncs.com/surenpi/prerender:latest
+docker tag registry.cn-beijing.aliyuncs.com/surenpi/prerender:latest migmartri/prerender:latest
