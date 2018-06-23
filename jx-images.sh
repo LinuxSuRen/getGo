@@ -44,3 +44,6 @@ docker tag registry.cn-beijing.aliyuncs.com/surenpi/prerender:latest migmartri/p
 
 docker pull registry.cn-beijing.aliyuncs.com/surenpi/pipeline-controller:dev
 docker tag registry.cn-beijing.aliyuncs.com/surenpi/pipeline-controller:dev rawlingsj/pipeline-controller:dev
+
+docker pull registry.cn-beijing.aliyuncs.com/surenpi/builder-go:0.0.310
+docker tag registry.cn-beijing.aliyuncs.com/surenpi/builder-go:0.0.310 jenkinsxio/builder-go:0.0.310
