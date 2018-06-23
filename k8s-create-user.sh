@@ -16,6 +16,7 @@ kubectl create clusterrolebinding ${NAME}-admin \
 
 wget https://raw.githubusercontent.com/LinuxSuRen/getGo/master/kube-user-install.sh
 mv kube-user-install.sh install.sh
+chmod u+x install.sh
 
 tar czvf ${NAME}.tar.gz ${NAME}* install.sh
 rm -rfv ${NAME}.key ${NAME}.csr ${NAME}.crt install.sh
