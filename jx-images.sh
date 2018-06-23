@@ -41,3 +41,6 @@ docker tag registry.cn-beijing.aliyuncs.com/surenpi/registry:2.6.2 registry:2.6.
 
 docker pull registry.cn-beijing.aliyuncs.com/surenpi/prerender:latest
 docker tag registry.cn-beijing.aliyuncs.com/surenpi/prerender:latest migmartri/prerender:latest
+
+docker pull registry.cn-beijing.aliyuncs.com/surenpi/pipeline-controller:dev
+docker tag registry.cn-beijing.aliyuncs.com/surenpi/pipeline-controller:dev rawlingsj/pipeline-controller:dev
