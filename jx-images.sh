@@ -6,6 +6,9 @@ docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/tiller:v2.9.1 gcr.io/kubern
 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1
 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/monocular-api:v0.6.1 bitnami/monocular-api:v0.6.1
 
+docker pull registry.cn-beijing.aliyuncs.com/surenpi/monocular-ui:v0.6.1
+docker tag registry.cn-beijing.aliyuncs.com/surenpi/monocular-ui:v0.6.1 bitnami/monocular-ui:v0.6.1
+
 docker pull registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7
 docker tag registry.cn-hangzhou.aliyuncs.com/surenpi/addon-resizer:1.7 k8s.gcr.io/addon-resizer:1.7
 

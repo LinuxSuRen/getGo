@@ -15,8 +15,14 @@ kubectl patch deploy -n jx jenkins-x-chartmuseum -p '{"spec":{"template":{"spec"
 kubectl patch deploy -n jx jenkins-x-docker-registry --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/volumes/0", "value":{"hostPath":{"path": "/root/.k8s.data/jenkins-x-docker-registry","type": ""},"name": "data"}}]'
 kubectl patch deploy -n jx jenkins-x-docker-registry -p '{"spec":{"template":{"spec":{"nodeSelector":{"name":"master"}}}}}'
 
+kubectl patch deploy -n jx pipelinecontroller -p '{"spec":{"template":{"spec":{"nodeSelector":{"name":"master"}}}}}'
+kubectl patch deploy -n jx jenkins-x-monocular-api -p '{"spec":{"template":{"spec":{"nodeSelector":{"name":"master"}}}}}'
+kubectl patch deploy -n jx jenkins-x-monocular-ui -p '{"spec":{"template":{"spec":{"nodeSelector":{"name":"master"}}}}}'
+kubectl patch deploy -n jx jenkins-x-heapster -p '{"spec":{"template":{"spec":{"nodeSelector":{"name":"master"}}}}}'
+kubectl patch deploy -n jx jenkins-x-monocular-prerender -p '{"spec":{"template":{"spec":{"nodeSelector":{"name":"master"}}}}}'
+
 kubectl patch deploy -n kube-system jxing-nginx-ingress-controller -p '{"spec":{"template":{"spec":{"hostNetwork":true}}}}'
 
+kubectl patch deploy -n kube-system tiller-deploy -p '{"spec":{"template":{"spec":{"nodeSelector":{"name":"master"}}}}}'
 kubectl patch deploy -n kube-system jxing-nginx-ingress-default-backend -p '{"spec":{"template":{"spec":{"nodeSelector":{"name":"master"}}}}}'
-
 kubectl patch deploy -n kube-system jxing-nginx-ingress-controller -p '{"spec":{"template":{"spec":{"nodeSelector":{"name":"master"}}}}}'
