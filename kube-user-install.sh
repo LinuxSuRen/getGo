@@ -13,6 +13,7 @@ export ADDRESS=https://$2:6443
 export KEY=$1.key
 export CERT=$1.crt
 
+kubectl config delete-context $1
 kubectl config set-cluster $1 --server=${ADDRESS} --insecure-skip-tls-verify=true
 kubectl config set-credentials $1 --client-key=${KEY} --client-certificate=${CERT} --embed-certs=true
 kubectl config set-context $1 --cluster=$1 --user=$1
