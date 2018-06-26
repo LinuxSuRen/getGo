@@ -11,3 +11,7 @@ kubectl patch deploy -n jx jenkins-x-chartmuseum -p '{"spec":{"template":{"spec"
 kubectl patch deploy -n jx jenkins-x-docker-registry -p '{"spec":{"template":{"spec":{"volumes":[{"hostPath":{"path": "~.k8s.data/jenkins-x-docker-registry","type": ""},"name": "data"}]}}}}'
 
 kubectl patch deploy -n kube-system jxing-nginx-ingress-controller -p '{"spec":{"template":{"spec":{"hostNetwork":true}}}}'
+
+kubectl patch deploy -n kube-system jxing-nginx-ingress-default-backend -p '{"spec":{"template":{"spec":{"nodeSelector":{"name":"master"}}}}}'
+
+kubectl patch deploy -n kube-system jxing-nginx-ingress-controller -p '{"spec":{"template":{"spec":{"nodeSelector":{"name":"master"}}}}}'
