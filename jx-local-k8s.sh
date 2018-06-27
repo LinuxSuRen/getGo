@@ -6,7 +6,7 @@ kubectl patch deploy -n jx jenkins -p '{"spec":{"template":{"spec":{"nodeSelecto
 kubectl patch deploy -n jx jenkins-x-nexus --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/volumes/1", "value":{"hostPath":{"path": "/root/.k8s.data/jenkins-x-nexus","type": ""},"name": "nexus-data-volume"}}]'
 kubectl patch deploy -n jx jenkins-x-nexus -p '{"spec":{"template":{"spec":{"nodeSelector":{"name":"master"}}}}}'
 
-kubectl patch deploy -n jx jenkins-x-mongodb --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/volumes/1", "value":{"hostPath":{"path": "/root/.k8s.data/jenkins-x-mongodb","type": ""},"name": "data"}}]'
+kubectl patch deploy -n jx jenkins-x-mongodb --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/volumes/0", "value":{"hostPath":{"path": "/root/.k8s.data/jenkins-x-mongodb","type": ""},"name": "data"}}]'
 kubectl patch deploy -n jx jenkins-x-mongodb -p '{"spec":{"template":{"spec":{"nodeSelector":{"name":"master"}}}}}'
 
 kubectl patch deploy -n jx jenkins-x-chartmuseum --type='json' -p='[{"op": "replace", "path": "/spec/template/spec/volumes/0", "value":{"hostPath":{"path": "/root/.k8s.data/jenkins-x-chartmuseum","type": ""},"name": "storage-volume"}}]'
