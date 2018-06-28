@@ -22,10 +22,10 @@ fi
 
 read -p 'do we need insecure docker? yes or no?' name
 if [ "$name" = "yes" ]; then
-  ip=`kkubectl get service -n jx jenkins-x-docker-registry | grep jenkins | awk '{print $3}`
+  ip=`kubectl get service -n jx jenkins-x-docker-registry | grep jenkins | awk '{print $3}'`
   conf="/etc/systemd/system/docker.service.d/docker.conf"
 
-  mkdir $(dirname $conf)
+  mkdir $(dirname $conf) -p
 
   echo "[Service]" > $conf
   echo "ExecStart" >> $conf
