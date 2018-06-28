@@ -28,7 +28,7 @@ if [ "$name" = "yes" ]; then
   mkdir $(dirname $conf) -p
 
   echo "[Service]" > $conf
-  echo "ExecStart" >> $conf
+  echo "ExecStart=" >> $conf
   echo "ExecStart=/usr/bin/dockerd -H fd:// --insecure-registry $ip:5000" >> $conf
 
   echo "config file write well, prepare to restart docker"
